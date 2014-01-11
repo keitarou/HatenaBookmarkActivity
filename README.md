@@ -6,10 +6,11 @@
 
 
     NSArray* activityItems = [NSArray arrayWithObjects:
-                              self.post.title,
-                              self.post.url,
-                              nil];
-
+                                [NSString stringWithFormat:@"Google"],
+                                [NSURL URLWithString:@"http://google.com"],
+                                nil
+                              ];
+                              
     HatenaBookmarkActivity* hatenaBookmarkActivity = [[HatenaBookmarkActivity alloc] initWithBackURL:[NSURL URLWithString:@"memoblog://"]];
 
     UIActivityViewController *activityView = [[UIActivityViewController alloc]
